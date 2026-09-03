@@ -19,7 +19,7 @@
             <div class="input-group">
                 <label for="incomeInput">Total Paycheck / Income</label>
                 <div class="input-wrapper">
-                    <span class="currency-symbol">$</span>
+                    <span class="currency-symbol">₱</span>
                     <input
                         type="number"
                         id="incomeInput"
@@ -34,7 +34,8 @@
             <button type="submit" class="calculator-btn">Calculate Budget</button>
         </form>
 
-        <section id="resultSection" class="results-section" aria-live="polite">
+        <!-- Fixed ID: resultsSection -->
+        <section id="resultsSection" class="results-section" aria-live="polite">
             <ul class="breakdown-list">
                 <li class="breakdown-item needs">
                     <span class="category-label">Needs (50%)</span>
@@ -44,8 +45,14 @@
                     <span class="category-label">Savings/Investments (15%)</span>
                     <span id="savingsValue" class="category-value">₱0.00</span>
                 </li>
-                <li class="breakdown-item short-item">
-                    <span class="category-label">Short-term Goals (5%)</span>
+                <!-- Fixed ID: shortTermValue & class: short-term -->
+                <li class="breakdown-item short-term">
+                    <span class="category-label">Short-Term Goals (5%)</span>
+                    <span id="shortTermValue" class="category-value">₱0.00</span>
+                </li>
+                <!-- Added missing Wants category -->
+                <li class="breakdown-item wants">
+                    <span class="category-label">Wants/Lifestyle (30%)</span>
                     <span id="wantsValue" class="category-value">₱0.00</span>
                 </li>
             </ul>

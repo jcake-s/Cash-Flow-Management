@@ -29,5 +29,7 @@ function handleBudgetSubmit(event) {
     document.getElementById('totalValue').textContent = formatCurrency(total);
 
     const resultsSection = document.getElementById('resultsSection');
-    resultsSection.classList.add('active');
+    if (resultsSection) {
+        resultsSection.classList.add('active');
+    }
 }
