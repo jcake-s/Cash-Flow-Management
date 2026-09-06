@@ -27,6 +27,12 @@ function handleBudgetSubmit(event) {
     document.getElementById('shortTermValue').textContent = formatCurrency(shortTerm);
     document.getElementById('wantsValue').textContent = formatCurrency(wants);
     document.getElementById('totalValue').textContent = formatCurrency(total);
+    document.getElementById('incomeInput')?.addEventListener('input', (e) => {
+        const value = parseFloat(e.target.value);
+        if (!isNaN(value) && value > 0) {
+            handleBudgetSubmit(new Event('submit'));
+        }
+    });
 
     const resultsSection = document.getElementById('resultsSection');
     if (resultsSection) {

@@ -1,13 +1,13 @@
 :root {
     --primary-color: #2563eb;
     --primary-hover: #1d4ed8;
-    --background-color: #f8fafc;
-    --card-background: #ffffff;
+    --background-color: #008080;
+    --card-background: #ffcba4;
     --text-main: #1e293b;
-    --text-muted: #64748b;
+    --text-muted: #485464;
     --border-color: #e2e8f0;
-    --needs-color: #3b82f6;
-    --savings-color: #10b981;
+    --needs-color: #9b1c4e;
+    --savings-color: #0f5f75;
     --shortterm-color: #f59e0b;
     --wants-color: #8b5cf6;
     --radius: 12px;
@@ -146,10 +146,10 @@ button.calculate-btn:hover {
     font-weight: 600;
 }
 
-.breakdown-item.needs { border-left: 4px solid var(--needs-color); }
-.breakdown-item.savings { border-left: 4px solid var(--savings-color); }
-.breakdown-item.short-term { border-left: 4px solid var(--shortterm-color); }
-.breakdown-item.wants { border-left: 4px solid var(--wants-color); }
+.breakdown-item.needs { border-right: 4px solid var(--needs-color); }
+.breakdown-item.savings { border-right: 4px solid var(--savings-color); }
+.breakdown-item.short-term { border-right: 4px solid var(--shortterm-color); }
+.breakdown-item.wants { border-right: 4px solid var(--wants-color); }
 
 .total-row {
     display: flex;
