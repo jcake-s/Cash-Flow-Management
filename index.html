@@ -34,10 +34,29 @@
                 </div>
             </div>
 
+            <div class="input-group">
+                <label for="frequencySelect">Paycheck Frequency</label>
+                <select id="frequencySelect">
+                    <option value="1">Monthly (12 / year)</option>
+                    <option value="2">Semi-Monthly (24 / year)</option>
+                    <option value="3">Bi-Weekly (26 / year)</option>
+                    <option value="4">Weekly (52 / year)</option>
+                </select>
+            </div>
+
             <button type="submit" class="calculate-btn">Calculate Budget</button>
         </form>
 
         <section id="resultsSection" class="results-section" aria-live="polite">
+            <div class="chart-container">
+                <div class="donut-chart" id="donutChart">
+                    <div class="donut-hole">
+                        <span>50-15-5-30</span>
+                        <small>Rule</small>
+                    </div>
+                </div>
+            </div>
+
             <ul class="breakdown-list">
                 <li class="breakdown-item needs">
                     <span class="category-label">Needs (50%)</span>
@@ -60,6 +79,11 @@
             <div class="total-row">
                 <span>Total Allocated</span>
                 <span id="totalValue">₱0.00</span>
+            </div>
+
+            <div class="monthly-summary">
+                <span>Est. Monthly Total:</span>
+                <strong id="monthlyTotalValue">₱0.00 / mo</strong>
             </div>
         </section>
     </main>

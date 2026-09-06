@@ -2,7 +2,10 @@ function handleBudgetSubmit(event) {
     event.preventDefault();
 
     const incomeInput = document.getElementById('incomeInput');
+    const frequencySelect = document.getElementById('frequencySelect');
+
     const income = parseFloat(incomeInput.value);
+    const paychecksPerMonth = parseFloat(frequencySelect.value);
 
     if (isNaN(income) || income <= 0) {
         alert("Please enter a valid positive income number.");
@@ -14,6 +17,8 @@ function handleBudgetSubmit(event) {
     const shortTerm = income * 0.05;
     const wants = income * 0.30;
     const total = needs + savings + shortTerm + wants;
+
+    const monthlyTotal = income * paychecksPerMonth;
 
     const formatCurrency = (amount) => {
         return '₱' + amount.toLocaleString('en-PH', {
@@ -27,6 +32,7 @@ function handleBudgetSubmit(event) {
     document.getElementById('shortTermValue').textContent = formatCurrency(shortTerm);
     document.getElementById('wantsValue').textContent = formatCurrency(wants);
     document.getElementById('totalValue').textContent = formatCurrency(total);
+    document.getElementById('monthlyTotalValue').textContent = formatCurrency(monthlyTotal) + ' / mo';
     document.getElementById('incomeInput')?.addEventListener('input', (e) => {
         const value = parseFloat(e.target.value);
         if (!isNaN(value) && value > 0) {

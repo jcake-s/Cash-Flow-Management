@@ -120,6 +120,48 @@ button.calculate-btn:hover {
     display: block;
 }
 
+.chart-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.donut-chart {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: conic-gradient(
+        var(--needs-color) 0% 50%,
+        var(--savings-color) 50% 65%,
+        var(--shortterm-color) 65% 70%,
+        var(--wants-color) 70% 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.donut-hole {
+    width: 90px;
+    height: 90px;
+    background-color: var(--card-background);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-main);
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.donut-hole small {
+    font-size:  0.7rem;
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
 .breakdown-list {
     list-style: none;
     display: flex;
@@ -160,4 +202,18 @@ button.calculate-btn:hover {
     border-radius: 8px;
     font-weight: 700;
     color: var(--primary-color);
+}
+
+.monthly-summary {
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    padding: 0 4px;
+}
+
+.monthly-summary strong {
+    color: var(--text-main);
 }
