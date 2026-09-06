@@ -10,8 +10,8 @@
     --savings-color: #0f5f75;
     --shortterm-color: #f59e0b;
     --wants-color: #8b5cf6;
-    --radius: 12px;
-    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    --radius: 16px;
+    --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.2);
 }
 
 * {
@@ -123,7 +123,7 @@ button.calculate-btn:hover {
 .chart-container {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 }
 
 .donut-chart {
@@ -174,7 +174,7 @@ button.calculate-btn:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 12px;
+    padding: 8px 12px;
     background-color: var(--background-color);
     border-radius: 8px;
     font-size: 0.9rem;
@@ -182,16 +182,33 @@ button.calculate-btn:hover {
 
 .category-label {
     font-weight: 500;
+    color: var(--text-main);
 }
 
 .category-value {
     font-weight: 600;
+    color: #ffffff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.825rem;
+    letter-spacing: 0.02rem;
 }
 
-.breakdown-item.needs { border-right: 4px solid var(--needs-color); }
-.breakdown-item.savings { border-right: 4px solid var(--savings-color); }
-.breakdown-item.short-term { border-right: 4px solid var(--shortterm-color); }
-.breakdown-item.wants { border-right: 4px solid var(--wants-color); }
+.breakdown-item.needs .category-value {
+    background-color: var(--needs-color);
+}
+
+.breakdown-item.savings .category-value {
+    background-color: var(--savings-color);
+}
+
+.breakdown-item.short-term .category-value {
+    background-color: var(--shortterm-color);
+}
+
+.breakdown-item.wants .category-value {
+    background-color: var(--wants-color);
+}
 
 .total-row {
     display: flex;
